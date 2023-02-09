@@ -1,0 +1,46 @@
+@import "../mixin";
+@import "../variables";
+
+.facilities {
+
+
+  &_heading {
+    margin-bottom: 60px;
+    padding-left: 40px;
+    color: $color_main_green;
+    border-left: 2px solid $color_main_green;
+    @include respond-to(tablet) {
+      & {
+        margin-bottom: 50px;
+      }
+    }
+    @include respond-to(mobile) {
+      & {
+        padding-left: 30px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &_list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 15px;
+
+    @include respond-to(tablet) {
+      & {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @include respond-to(mobile) {
+      & {
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 5px;
+      }
+    }
+  }
+
+  &_item {
+
+  }
+}

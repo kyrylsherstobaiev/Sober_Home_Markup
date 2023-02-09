@@ -1,0 +1,47 @@
+@import "../mixin";
+
+.header_burger {
+  display: block;
+  font-size: 0;
+}
+
+.header_burger_label {
+  display: none;
+  font-size: 0;
+  background-image: url("../img/burger/burger_lock_icon.svg");
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: cover;
+}
+
+@include respond-to(tablet) {
+  .header_burger_label {
+    display: block;
+  }
+}
+
+@include respond-to(mobile) {
+  .header_burger_label {
+    display: block;
+  }
+}
+
+.header_burger_input {
+  display: none;
+
+  &:checked ~ .header_burger_label {
+    background-image: url("../img/burger/burger_active_icon.svg");
+  }
+
+  &:checked ~ .header_navigation {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+
+
+

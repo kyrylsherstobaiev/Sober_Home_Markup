@@ -1,0 +1,76 @@
+@import "../mixin";
+@import "burger";
+@import "header_navigation";
+@import "search_field";
+@import "phone_button";
+
+
+.header {
+  padding: 0 120px;
+  @include respond-to(tablet) {
+    & {
+      padding: 0 15px;
+    }
+  }
+
+  @include respond-to(mobile) {
+    & {
+      padding: 0 15px;
+    }
+  }
+}
+
+
+
+.inner_header {
+  @include flex_set(flex, null, space-between, center);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+
+.wrapper_header_navigation {
+  display: flex;
+  align-items: center;
+  @include respond-to(tablet) {
+    & {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+  @include respond-to(mobile) {
+    & {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+}
+
+
+
+//******* header_logo ********
+
+.header_logo_embedded {
+  display: none;
+}
+
+@include respond-to(tablet) {
+  .header_logo_embedded {
+    display: block;
+  }
+
+  .header_logo_internal {
+    display: none;
+  }
+}
+
+@include respond-to(mobile) {
+  .header_logo_embedded {
+    display: block;
+  }
+
+  .header_logo_internal {
+    display: none;
+  }
+}
+

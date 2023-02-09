@@ -1,0 +1,30 @@
+@import "../mixin";
+@import "../variables";
+
+
+.addiction {
+
+
+  &_width {
+    width: 70%;
+    @include respond-to(tablet){
+      & {
+        width: 80%;
+      }
+    }
+    @include respond-to(mobile){
+      & {
+        width: 100%;
+      }
+    }
+  }
+
+  &_heading {
+    color: $color_main_green;
+    padding-left: 40px;
+    margin-bottom: 40px;
+    border-left: 2px solid $color_main_green;
+  }
+
+
+}

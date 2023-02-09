@@ -1,0 +1,22 @@
+@import "../variables";
+@import "../mixin";
+
+
+@include respond-to(tablet) {
+  .disappeared_button {
+    display: none;
+  }
+}
+
+@include respond-to(mobile) {
+  .disappeared_button {
+    display: none;
+  }
+}
+
+.phone_button_link {
+  display: inline-block;
+  padding: 10px 25px;
+  background: $color_main_green;
+  color: $color_main_white;
+}

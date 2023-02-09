@@ -1,0 +1,137 @@
+@import "../mixin";
+@import "../variables";
+
+.banner {
+  background-image: url("../img/banner/main_banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: $color_main_white;
+  padding: 100px 0 300px 0;
+  @include respond-to(tablet) {
+    & {
+      padding: 100px 70px 300px 70px;
+    }
+  }
+  @include respond-to(mobile) {
+    & {
+      padding: 110px 15px 130px 15px;
+      background-image: url("../img/banner/main_banner_mobile.png");
+    }
+  }
+
+  &_construction {
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    grid-template-rows: 420px 140px;
+    grid-auto-flow: column;
+
+    @include respond-to(tablet) {
+      & {
+        grid-template-columns: 65% 1fr;
+      }
+    }
+    @include respond-to(tablet_add) {
+      & {
+        grid-template-columns: 55% 1fr;
+      }
+    }
+    @include respond-to(mobile) {
+      & {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-auto-flow: row;
+      }
+    }
+  }
+
+  &_heading {
+    font-size: rem(50);
+    text-transform: uppercase;
+    align-self: flex-end;
+    @include respond-to(tablet) {
+      & {
+        font-size: rem(42);
+      }
+    }
+    @include respond-to(mobile) {
+      & {
+        font-size: rem(35);
+        margin-bottom: 30px;
+      }
+    }
+
+  }
+
+
+  &_list {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    text-transform: uppercase;
+
+    @include respond-to(tablet) {
+      & {
+        flex-direction: column;
+        border-left: 2px solid $color_main_white;
+        align-items: flex-start;
+        padding-left: 40px;
+        margin-top: 30px;
+      }
+    }
+    @include respond-to(mobile) {
+      & {
+        flex-direction: column;
+        border-left: 2px solid $color_main_white;
+        align-items: flex-start;
+        padding-left: 30px;
+        margin-top: 0;
+        margin-bottom: 80px;
+      }
+    }
+  }
+
+  &_item {
+
+    & + & {
+      margin-left: 30px;
+      @include respond-to(tablet) {
+        & {
+          margin-top: 15px;
+          margin-left: 0;
+        }
+      }
+      @include respond-to(mobile) {
+        & {
+          margin-top: 15px;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  &_find {
+    font-size: rem(18);
+    text-transform: uppercase;
+    align-self: flex-end;
+
+    &_text {
+      margin-bottom: 10px;
+      @include respond-to(mobile) {
+        & {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+
+}
+
+.move_down {
+  margin-top: 10px;
+  @include respond-to(mobile) {
+    & {
+      margin-top: 0;
+    }
+  }
+}

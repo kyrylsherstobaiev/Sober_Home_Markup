@@ -1,0 +1,55 @@
+@import "../mixin";
+@import "../variables";
+
+.phone {
+
+
+  &_constructor_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color_main_green;
+    padding: 60px 110px;
+    background-image: url("../img/elipse/ellipse.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    @include respond-to(tablet) {
+      & {
+        flex-direction: column;
+        padding: 50px 120px;
+        background-image: none;
+      }
+    }
+    @include respond-to(mobile) {
+      & {
+        flex-direction: column;
+        padding: 40px 20px;
+        background-image: none;
+      }
+    }
+  }
+
+  &_description {
+    @include respond-to(tablet) {
+      & {
+        margin-bottom: 20px;
+      }
+    }
+    @include respond-to(mobile) {
+      & {
+        margin-bottom: 20px;
+      }
+    }
+
+    &_text {
+      color: $color_main_white;
+      text-transform: uppercase;
+    }
+  }
+
+
+  &_button_white {
+    color: $color_main_green;
+    background: $color_main_white;
+  }
+}
